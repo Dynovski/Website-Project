@@ -1,0 +1,55 @@
+:root {
+    --ff-roboto: "Roboto", cursive;
+    --ff-baloo: "Baloo_2";
+    --ff-pt-sans: "PT_Sans";
+    --ff-dosis: "Dosis";
+    --ff-oswald: "Oswald";
+
+
+    --fw-regular: 400;
+    --fw-medium: 600;
+    --fw-bold: 800;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #d34d2c;
+
+    --fs-h1: 3.25rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.75rem;
+    --fs-body: 1rem;
+}
+
+@media(min-width: 800px)
+{
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+section {
+    padding: 5em 2em;
+}
+
+.section-title {
+    margin-bottom: 0.25em;
+}
+
+.section-subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}

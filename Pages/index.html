@@ -13,11 +13,86 @@
 
     <!-- Custom CSS file, overrides bootstrap properties -->
     <link rel="stylesheet" href="../Styles/style.css">
+
+    <!-- Page specific CSS file -->
+    <link rel="stylesheet" href="../Styles/home.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600,800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ========================= Start Header area ========================= -->
+    <header class="header-area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand" href="#">My Personal Webpage</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <!-- ========================= End Header area ========================= -->
+
+    <!-- ========================= Start Intro area ========================= -->
+    <section class="general-info">
+        <h1 class="section-title section-title--intro">
+            Hi, I am <strong>Zbigniew Dynowski</strong>
+        </h1>
+        <p class="section-subtitle section-subtitle--intro">
+            This is my <em>First Website</em>!
+        </p>
+        <img class="image-intro" src="../Images/picture.jpg" alt="Picture of Zbigniew Dynowski">
+    </section>
+    <!-- ========================= End Intro area ========================= -->
+
+    <!-- ========================= Start Description area ========================= -->
+    <section class="additional-info">
+
+    </section>
+
+    <!-- ========================= End Description area ========================= -->
+
+    <!-- ========================= Start Footer area ========================= -->
+    <footer>
+        <a href="mailto:Zbigniew.Dynowski@metropolia.fi" class="footer-link">Mail me!</a>
+        <ul class="socials-list">
+            <li class="socials-list-item">
+                <a href="https://www.facebook.com" class="socials-list-link">Facebook</a>
+            </li>
+            <li class="socials-list-item">
+                <a href="https://www.github.com" class="socials-list-link">Github</a>
+            </li>
+            <li class="socials-list-item">
+                <a href="https://www.twitter.com" class="socials-list-link">Twitter</a>
+            </li>
+            <li class="socials-list-item">
+                <a href="https://www.instagram.com" class="socials-list-link">Instagram</a>
+            </li>
+        </ul>
+    </footer>
+    <!-- ========================= End Footer area ========================= -->
     
     <!-- jQuery file -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../JS/jquery.3.4.1.js"></script>
 
     <!-- Bootstrap JavaScript file -->
     <script src="../JS/bootstrap.min.js"></script>

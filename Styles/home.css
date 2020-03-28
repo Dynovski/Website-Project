@@ -1,0 +1,78 @@
+/* import variables for website */
+@import url(variables.css);
+
+/* general styles */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+em {
+    font-weight: var(--fw-medium);
+}
+
+/* typography */
+
+h1, h2, h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+
+h2 { font-size: var(--fs-h2) }
+
+h3 { font-size: var(--fs-h3) }
+
+.section-subtitle--intro {
+    background: var(--clr-accent);
+    padding: 0.25em 1em;
+    font-family: "Playfair_Display";
+    font-size: var(--fs-h2);
+    margin-bottom: 1em;
+    grid-area: subtitle;
+}
+
+.section-title strong {
+    display: block;
+}
+
+.general-info {
+    position: relative;
+}
+
+@media(min-width: 860px) {
+    .general-info {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "image title"
+            "image subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .image-intro {
+        grid-area: image;
+        min-width: 400px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        
+        position: relative;
+        left: -2em;
+        width: calc(100% + 3em);
+    }
+}
+
+.section-title--intro {
+    grid-area: title;
+}

@@ -1,3 +1,13 @@
 /* import fonts so that thay can be used in this stylesheet */
-@import url(./fonts.css)
+@import url(./fonts.css);
 
+/* Navigation bar */
+.header-area .main-menu .nav-item .nav-link {
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+section {
+    padding: 5em 2em;
+}

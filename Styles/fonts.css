@@ -11,6 +11,16 @@
 }
 
 @font-face {
-    font-family: "Baloo_Thambi_2";
-    src: "../Fonts/Baloo_Thambi_2";
+    font-family: "Oswald";
+    src: "../Fonts/Oswald";
+}
+
+@font-face {
+    font-family: "Dosis";
+    src: "..Fonts/Dosis";
+}
+
+@font-face {
+    font-family: "Baloo_2";
+    src: "../Fonts/Baloo_2";
 }
