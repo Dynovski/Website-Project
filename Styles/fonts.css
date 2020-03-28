@@ -1,0 +1,16 @@
+/* @font-face */
+
+@font-face {
+    font-family: "Roboto";
+    src: "../Fonts/Roboto";
+}
+
+@font-face {
+    font-family: "PT_Sans";
+    src: "../Fonts/PT_Sans";
+}
+
+@font-face {
+    font-family: "Baloo_Thambi_2";
+    src: "../Fonts/Baloo_Thambi_2";
+}
