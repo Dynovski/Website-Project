@@ -3,9 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal website - Skills</title>
+    <title>Skills</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="../Styles/bootstrap.min.css">
+
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="../Styles/all.min.css">
+
+    <!-- Custom CSS file, overrides bootstrap properties -->
+    <link rel="stylesheet" href="../Styles/style.css">
+
+    <!-- Page specific CSS file -->
+    <link rel="stylesheet" href="../Styles/home.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600,800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ========================= Start Header area ========================= -->
+    <header class="header-area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand" href="#">My Personal Webpage</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <!-- ========================= End Header area ========================= -->
+
+    <!-- ========================= Start Skills area ========================= -->
+    <section class="skill">
+        <h2 class="section-title section-title--skill">
+            Java Programming
+        </h2>
+        <p class="section-subtitle section-subtitle--skill">
+            I have <strong>basic/intermediate</strong> skills in Java programming. I am aspecially familiar with Java 8.<br>
+            I have done projects in Java using <em>JavaFX</em> and <em>Android</em>.
+        </p>
+        <img class="image-skills" src="../Images/" alt="Picture shows some Java code">
+    </section>
+
+    <section class="skill">
+        <h2 class="section-title section-title--skill">
+            SQL Programming
+        </h2>
+        <p class="section-subtitle section-subtitle--skill">
+            I have <strong>basic</strong> skills in SQL programming. I am also familiar with relational databases.<br>
+            I have used databases in all of my biggest projects.
+        </p>
+        <img class="image-skills" src="../Images/" alt="Picture shows some SQL code">
+    </section>
+
+    <section class="skill">
+        <h2 class="section-title section-title--skill">
+            C/C++ Programming
+        </h2>
+        <p class="section-subtitle section-subtitle--skill">
+            I have <strong>basic</strong> skills in C and C++ programming. These are the languages that I learned first.<br>
+            My projects using these languages were very academical, they were based on implementing my own versions of well known algorithms.
+            What I learned the most from using these languages is what wxactly needs to be done by a computer in order to make programms work.
+        </p>
+        <img class="image-skills" src="../Images/" alt="Picture shows some C++ code">
+    </section>
+
+    <section class="skill">
+        <h2 class="section-title section-title--skill">
+            Web Programming
+        </h2>
+        <p class="section-subtitle section-subtitle--skill">
+            I have <strong>basic</strong> skills in Web programming. This is my latest skill that I am currently learning.<br>
+            This website is part of my practice with it. I am using this project to learn the ropes in Web programming.
+        </p>
+        <img class="image-skills" src="../Images/" alt="Picture shows some HTML code">
+    </section>
+
+    <section class="skill">
+        <h2 class="section-title section-title--skill">
+            Languages
+        </h2>
+        <p class="section-subtitle section-subtitle--skill">
+            I have been learning many languages throughout my life. I am, however, proficient only in few of them.
+        </p>
+        <ul id="language-list">
+            <li class="language-list-item">
+                Polish - proficient [Native]
+            </li>
+            <li class="language-list-item">
+                English - proficient [C1/C2] CAE Grade B
+            </li>
+            <li class="language-list-item">
+                German - intermediate [B1]
+            </li>
+            <li class="language-list-item">
+                Spanish - basic [A1]
+            </li>
+            <li class="language-list-item">
+                Russian - basic [A1]
+            </li>
+        </ul>
+        <img class="image-skills" src="../Images/" alt="Picture shows person speaking">
+    </section>
+    <!-- ========================= End Skills area ========================= -->
+
+    <!-- ========================= Start Files area ========================= -->
+
+    <section class="files">
+        <h2 class="section-title section-title--files">
+            Download my CV
+        </h2>
+        <p class="section-subtitle section-subtitle--siles">
+            Here is my <em>CV</em> both in <strong>.pdf</strong> and <strong>.doc</strong> format.
+        </p>
+        <ul id="files-list">
+            <li class="files-list-item">
+                <a href="Documents/CV.pdf" class="files-list-link">CV.pdf</a>
+            </li>
+            <li class="files-list-item">
+                <a href="Documents/CV.doc" class="files-list-link">CV.doc</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ========================= End Files area ========================= -->
+
+    <!-- ========================= Start Footer area ========================= -->
+    <footer>
+        <a href="mailto:Zbigniew.Dynowski@metropolia.fi" class="footer-link">
+          Mail me! <i class="fas fa-envelope"></i>
+        </a>
+        <ul id="socials-list">
+            <li class="socials-list-item">
+                <a href="https://www.facebook.com" class="socials-list-link">
+                  <i class="fab fa-facebook-f fa-lg"> </i>
+                </a>
+            </li>
+            <li class="socials-list-item">
+                <a href="https://www.github.com" class="socials-list-link">
+                  <i class="fab fa-github fa-lg"> </i>
+                </a>
+            </li>
+            <li class="socials-list-item">
+                <a href="https://www.twitter.com" class="socials-list-link">
+                  <i class="fab fa-twitter fa-lg"> </i>
+                </a>
+            </li>
+            <li class="socials-list-item">
+                <a href="https://www.instagram.com" class="socials-list-link">
+                  <i class="fab fa-instagram fa-lg"> </i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- ========================= End Footer area ========================= -->
     
+    <!-- jQuery file -->
+    <script src="../JS/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JavaScript file -->
+    <script src="../JS/bootstrap.min.js"></script>
 </body>
 </html>
