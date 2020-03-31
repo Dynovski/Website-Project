@@ -1,9 +1,9 @@
+/* Variables */
+
 :root {
-    --ff-roboto: "Roboto", cursive;
-    --ff-baloo: "Baloo_2";
-    --ff-pt-sans: "PT_Sans";
-    --ff-dosis: "Dosis";
-    --ff-oswald: "Oswald";
+    --ff-roboto: "Roboto";
+    --ff-sans-pro: 'Source Sans Pro', sans-serif;
+    --ff-code-pro: 'Source Code Pro', monospace;
 
 
     --fw-regular: 400;
@@ -18,7 +18,11 @@
     --fs-h2: 2.5rem;
     --fs-h3: 1.75rem;
     --fs-body: 1rem;
+
+    --box-shadow: 0.25em 0.25em 0.75em RGBA(0,0,0,0.25);
 }
+
+/* Changes for bigger screens */
 
 @media(min-width: 800px)
 {
@@ -30,6 +34,8 @@
     }
 }
 
+/* Body properties */
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -39,7 +45,26 @@ body {
     line-height: 1.6;
 }
 
+/* General styles */
+
 strong { font-weight: var(--fw-bold) }
+
+em { font-weight: var(--fw-medium) }
+
+/* Headers */
+
+h1, h2, h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+
+h2 { font-size: var(--fs-h2) }
+
+h3 { font-size: var(--fs-h3) }
+
+/* Sections */
 
 section {
     padding: 5em 2em;
@@ -52,4 +77,49 @@ section {
 .section-subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+}
+
+/* Footer */
+
+footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-link {
+    font-weight: var(--fw-bold);
+}
+
+.footer-link:hover,
+.socials-list-link:hover {
+    opacity: .7;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+#socials-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.socials-list-item {
+    margin: 0 .5em;
+}
+
+.socials-list-link {
+    padding: .5em;
 }

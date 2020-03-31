@@ -1,4 +1,5 @@
 /* import variables for website */
+
 @import url(variables.css);
 
 /* general styles */
@@ -8,31 +9,21 @@ img {
     max-width: 100%;
 }
 
-em {
-    font-weight: var(--fw-medium);
-}
-
 /* typography */
 
-h1, h2, h3 {
-    line-height: 1.1;
-    margin: 0;
+.section-title--intro {
+    font-weight: var(--fw-regular);
 }
 
-h1 { font-size: var(--fs-h1) }
-
-h2 { font-size: var(--fs-h2) }
-
-h3 { font-size: var(--fs-h3) }
-
-.section-subtitle--intro {
+.section-subtitle--intro,
+.section-subtitle--additional {
     background: var(--clr-accent);
     padding: 0.25em 1em;
-    font-family: "Playfair_Display";
-    font-size: var(--fs-h2);
+    font-family: var(--ff-code-pro);
     margin-bottom: 1em;
-    grid-area: subtitle;
 }
+
+/* General info */
 
 .section-title strong {
     display: block;
@@ -42,7 +33,11 @@ h3 { font-size: var(--fs-h3) }
     position: relative;
 }
 
-@media(min-width: 860px) {
+.image-intro {
+    box-shadow: var(--box-shadow);
+}
+
+@media(min-width: 1100px) {
     .general-info {
         display: grid;
         width: min-content;
@@ -73,6 +68,10 @@ h3 { font-size: var(--fs-h3) }
     }
 }
 
-.section-title--intro {
-    grid-area: title;
+/* Additional info */
+
+@media(min-width: 1100px) {
+    .additional-info {
+        margin: 0 auto;
+    }
 }

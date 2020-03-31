@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal website - Home</title>
+    <title>Home</title>
 
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="../Styles/bootstrap.min.css">
@@ -16,6 +16,8 @@
 
     <!-- Page specific CSS file -->
     <link rel="stylesheet" href="../Styles/home.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600,800&display=swap" rel="stylesheet">
 </head>
@@ -30,7 +32,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav w-100 justify-content-around align-items-center">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -66,15 +68,27 @@
 
     <!-- ========================= Start Description area ========================= -->
     <section class="additional-info">
-
+        <h2 class="section-title section-title--additional">
+            About me!
+        </h2>
+        <p class="section-subtitle section-subtitle--additional">
+            I am 3rd year student at <em>Warsaw University of Technology</em>!
+        </p>
+        <div class="about-me-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consequuntur dignissimos atque ea excepturi perspiciatis debitis qui recusandae harum assumenda beatae dolorum quaerat eum, ullam tempora est autem, temporibus veniam reiciendis aliquam cupiditate ipsum necessitatibus. Obcaecati at alias tempora officia?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque rerum fuga quos sed impedit ullam expedita? Porro obcaecati expedita repellat.
+          </p>
+        </div>
     </section>
-
     <!-- ========================= End Description area ========================= -->
-
+  
     <!-- ========================= Start Footer area ========================= -->
     <footer>
         <a href="mailto:Zbigniew.Dynowski@metropolia.fi" class="footer-link">Mail me!</a>
-        <ul class="socials-list">
+        <ul id="socials-list">
             <li class="socials-list-item">
                 <a href="https://www.facebook.com" class="socials-list-link">Facebook</a>
             </li>
