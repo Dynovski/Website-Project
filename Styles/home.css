@@ -69,12 +69,33 @@ img {
 }
 
 /* Additional info */
+
 .additional-info {
     max-width: 1200px;
+    margin: auto;
+    text-align: center;
 }
 
-@media(min-width: 1100px) {
-    .additional-info {
-        margin: 0 auto;
-    }
+.about-me-body {
+    font-size: var(--fs-h3);
+    font-family: var(--ff-sans-pro);
+    margin: 1.5em 0em;
+}
+
+#blue-color {
+    color: cyan;
+}
+
+#link-dostoevsky {
+    color: var(--clr-light);
+}
+
+#link-dostoevsky:visited {
+    text-decoration: none;
+    color: var(--clr-light);
+}
+  
+#link-dostoevsky:hover {
+    text-decoration: underline;
+    color: lime;
 }
