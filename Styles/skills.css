@@ -1,0 +1,25 @@
+/* import variables for website */
+
+@import url(variables.css);
+
+/* general styles */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* typography */
+
+.section-title--skill,
+.section-title--files {
+    font-weight: var(--fw-regular);
+}
+
+.section-subtitle--skill,
+.section-subtitle--files {
+    background: var(--clr-accent);
+    padding: 0.25em 1em;
+    font-family: var(--ff-code-pro);
+    margin-bottom: 1em;
+}
