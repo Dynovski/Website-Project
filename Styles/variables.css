@@ -10,9 +10,11 @@
     --fw-medium: 600;
     --fw-bold: 800;
 
-    --clr-light: #fff;
+    --clr-light: #F2F2F2;
+    --clr-darker: #1F2833;
+    --clr-background: #222629;
     --clr-dark: #303030;
-    --clr-accent: #d34d2c;
+    --clr-accent: #86C262;
 
     --fs-h1: 3.25rem;
     --fs-h2: 2.5rem;
@@ -37,8 +39,8 @@
 /* Body properties */
 
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-background);
+    color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-roboto);
     font-size: var(--fs-body);
@@ -77,6 +79,7 @@ section {
 .section-subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+    color: var(--clr-darker);
 }
 
 /* Footer */
