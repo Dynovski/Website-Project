@@ -1,0 +1,48 @@
+/* import variables for website */
+
+@import url(variables.css);
+
+/* general styles */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* typography */
+
+.section-title--project {
+    font-weight: var(--fw-regular);
+    text-align: center;
+    padding: 0.4em 0em 0.4em;
+    border-radius: 1em;
+
+}
+
+/* Projects */
+
+.section-title--project {
+    background-color: var(--clr-accent);
+    color: var(--clr-darker);
+}
+.card {
+    margin: 0em 2em;
+}
+
+.card-title {
+    padding: 0em 0em 0.5em;
+}
+
+.card-subtitle {
+    background-color: var(--clr-accent);
+    color: var(--clr-darker);
+    border-radius: 0.2em;
+    font-family: var(--ff-sans-pro);
+    padding: 0.1em;
+}
+
+.card-text {
+    font-family: var(--ff-code-pro);
+    padding: 1em 0em;
+}
+
