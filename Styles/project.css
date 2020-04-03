@@ -16,7 +16,6 @@ img {
     text-align: center;
     padding: 0.4em 0em 0.4em;
     border-radius: 1em;
-
 }
 
 /* Projects */
@@ -25,8 +24,9 @@ img {
     background-color: var(--clr-accent);
     color: var(--clr-darker);
 }
+
 .card {
-    margin: 0em 2em;
+    margin: 2em 2em;
 }
 
 .card-title {

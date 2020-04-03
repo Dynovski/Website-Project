@@ -24,34 +24,34 @@
 <body>
     <!-- ========================= Start Header area ========================= -->
     <header class="header-area">
-        <div class="main-menu">
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">My Personal Webpage</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav w-100 justify-content-around align-items-center">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="skills.html">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-        </div>
-    </header>
+      <div class="main-menu">
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+              <a class="navbar-brand" href="#">My Personal Webpage</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+      </div>
+  </header>
     <!-- ========================= End Header area ========================= -->
 
     <!-- ========================= Start Contact area ========================= -->
@@ -116,6 +116,57 @@
       </ul>
     </section>
     <!-- ========================= End Contact area ========================= -->
+
+    <!-- ========================= Start Form area ========================= -->
+    <section class="form">
+      <h2 class="section-title">
+        Contact me form:
+      </h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="input-first-name">First Name</label>
+            <input type="text" class="form-control text-light bg-dark text-center" id="input-first-name" placeholder="John" required maxlength="24">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="input-last-name">Last Name</label>
+            <input type="text" class="form-control text-light bg-dark text-center" id="input-last-name" placeholder="Smith" required maxlength="24">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-8 col-md-4">
+            <label for="input-gender">Gender</label>
+            <select class="form-control text-light bg-dark" id="input-gender" required>
+              <option selected>Select your gender...</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-4 col-md-2">
+            <label for="input-age">Age</label>
+            <input type="number" class="form-control text-light bg-dark text-center" id="input-age" placeholder="21" required min="19" max="99">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="input-email">Email</label>
+            <input type="email" class="form-control text-light bg-dark text-center" id="input-email" placeholder="example@mail.com" required maxlength="50">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="input-website">Website Address</label>
+          <input type="url" class="form-control text-light bg-dark text-center" id="input-website" placeholder="https://example.com/website">
+        </div>
+        <div class="form-group">
+          <label for="input-comment">Comment</label>
+          <textarea class="form-control text-light bg-dark text-center" id="input-comment" placeholder="Write your comment here..." rows="5" required maxlength="254"></textarea>
+        </div>
+        <div class="form-row justify-content-center">
+          <button type="reset" class="form-button btn btn-danger">Reset</button>
+          <button type="submit" class="form-button btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </section>
+    <!-- ========================= End Form area ========================= -->
 
     <!-- jQuery file -->
     <script src="../JS/jquery.3.4.1.js"></script>
