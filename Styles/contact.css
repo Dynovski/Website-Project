@@ -1,0 +1,51 @@
+/* import variables for website */
+
+@import url(variables.css);
+
+section {
+    padding: 1em 2em;
+    text-align: center;
+}
+
+.section-subtitle {
+    background: var(--clr-accent);
+    padding: 0.25em 1em;
+    margin: 0.5em 0em 0em;
+    display: inline-flex;
+    border-radius: 1em;
+}
+
+#socials-list {
+    background: var(--clr-accent);
+    font-size: var(--fs-h3);
+    list-style: none;
+    display: inline-flex;
+    margin: 1em 2em;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.socials-list-item {
+    margin: 0em 1.5em;
+}
+
+.socials-list-link {
+    padding: 0.5em;
+}
+
+a {
+    color: var(--clr-darker);
+}
+
+a:visited {
+    color: dimgray;
+}
+
+a:active {
+    color: red;
+}
+
+a:hover,
+a:focus {
+    color: dodgerblue;
+}
