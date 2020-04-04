@@ -97,3 +97,17 @@ img {
     font-weight: 600;
 }
 
+.section-title--add-skill {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.add-skill {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-button {
+    width: 150px;
+    margin: 0.5em 2em 0em;
+}
