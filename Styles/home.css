@@ -99,3 +99,12 @@ img {
     text-decoration: underline;
     color: lime;
 }
+
+/* Date and time */
+
+#current-date {
+    font-size: var(--fs-h3);
+    font-family: var(--ff-sans-pro);
+    color: var(--clr-light);
+    text-align: center;
+}
