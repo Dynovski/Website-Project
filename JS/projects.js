@@ -14,41 +14,43 @@ document.getElementById("first-project").onmouseout = () => {
 }
 
 
-// Hide Header on on scroll down
+// Hide Header on on scroll down using jQuery
 var didScroll;
-var lastScrollTop = 0;
+var previousDistanceFromTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
 
-$(window).scroll(function(event){
+$(window).scroll(function(event) {
     didScroll = true;
 });
 
 setInterval(function() {
-    if (didScroll) {
+    if(didScroll) {
         hasScrolled();
         didScroll = false;
     }
 }, 250);
 
 function hasScrolled() {
-    var st = $(this).scrollTop();
+    /* The vertical scroll position is the same as the number of pixels that are hidden from view 
+    above the scrollable area */
+    var distanceFromTop = $(this).scrollTop();
     
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
+    // Scroll must be more than delta to be noticed
+    if(Math.abs(previousDistanceFromTop - distanceFromTop) <= delta)
         return;
     
     // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
+    if (distanceFromTop > previousDistanceFromTop && distanceFromTop > navbarHeight){
         // Scroll Down
         $('header').addClass('nav-up');
     } else {
         // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
+        // If did not scroll past the document (possible on mac)
+        if(distanceFromTop + $(window).height() < $(document).height()) {
             $('header').removeClass('nav-up');
         }
     }
     
-    lastScrollTop = st;
+    previousDistanceFromTop = distanceFromTop;
 }

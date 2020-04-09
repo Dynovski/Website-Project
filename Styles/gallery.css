@@ -19,7 +19,7 @@
     color: var(--clr-darker);
 }
  
-.bss-slides{
+.bss-slides {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -27,38 +27,45 @@
     display: block; 
     line-height: 0;/*removes the gap if you put a border on the slideshow div*/   
   }
+
   figcaption {
     line-height: 1.5; /* restores line-height to the child element*/
   }
-  .bss-slides:focus{
+
+  .bss-slides:focus {
    outline: 0;
   }
-  .bss-slides figure{
+
+  .bss-slides figure {
     position: absolute;
     top: 0;
     width: 100%;
   }
-  .bss-slides figure:first-child{
+
+  .bss-slides figure:first-child {
     position: relative;
   }
-  .bss-slides figure img{
+
+  .bss-slides figure img {
     opacity: 0;
     -webkit-transition: opacity 1.2s;
     transition: opacity 1.2s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  .bss-slides .bss-show{
+
+  .bss-slides .bss-show {
     z-index: 2;
   }
-  .bss-slides .bss-show img{
+
+  .bss-slides .bss-show img {
     opacity: 1;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: relative; 
   }
   
-  .bss-slides figcaption{
+  .bss-slides figcaption {
     position: absolute;
     font-family: sans-serif;
     font-size: .8em;
@@ -73,14 +80,16 @@
     -webkit-transition: opacity 1.2s;
     transition: opacity 1.2s;
   }
-  .bss-slides .bss-show figcaption{
+
+  .bss-slides .bss-show figcaption {
     z-index: 3;
     opacity: 1;
   }
-  .bss-slides figcaption a{
+
+  .bss-slides figcaption a {
     color: #fff;    
   }
-  .bss-next, .bss-prev{
+  .bss-next, .bss-prev {
     color: #fff;
     position: absolute;
     background: #000;
@@ -95,23 +104,27 @@
     -ms-user-select: none;
     user-select: none;
   }
-  .bss-next:hover, .bss-prev:hover{
+
+  .bss-next:hover, .bss-prev:hover {
     cursor: pointer;
     opacity: 1;
   }
-  .bss-next{
+
+  .bss-next {
     right: -1px;
     padding: 10px 5px 15px 10px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
-  .bss-prev{
+
+  .bss-prev {
     left: 0;
     padding: 10px 10px 15px 5px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-  .bss-fullscreen{
+
+  .bss-fullscreen {
     display: block;
     width: 32px;
     height: 32px;    
@@ -124,41 +137,50 @@
     cursor: pointer;    
     opacity: .3;
   } 
-  .bss-fullscreen:hover{
+
+  .bss-fullscreen:hover {
     opacity: .8;   
   }
-  :-webkit-full-screen .bss-fullscreen{
+
+  :-webkit-full-screen .bss-fullscreen {
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       -webkit-background-size: contain;
       background-size: contain;
   }
+
   :-moz-full-screen .bss-fullscreen{
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       background-size: contain;
   }
-  :-ms-fullscreen .bss-fullscreen{
+
+  :-ms-fullscreen .bss-fullscreen {
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       background-size: contain;
   }
-  :full-screen .bss-fullscreen{
-      background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
-      -webkit-background-size: contain;
-      background-size: contain;
-  }
-  :-webkit-full-screen .bss-fullscreen{
+
+  :full-screen .bss-fullscreen {
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       -webkit-background-size: contain;
       background-size: contain;
   }
-  :-moz-full-screen .bss-fullscreen{
+
+  :-webkit-full-screen .bss-fullscreen {
+      background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
+      -webkit-background-size: contain;
+      background-size: contain;
+  }
+
+  :-moz-full-screen .bss-fullscreen {
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       background-size: contain;
   }
-  :-ms-fullscreen .bss-fullscreen{
+
+  :-ms-fullscreen .bss-fullscreen {
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       background-size: contain;
   }
-  :fullscreen .bss-fullscreen{
+
+  :fullscreen .bss-fullscreen {
       background: rgba(0,0,0,.4) url(../img/compress_ffffff_64.png);
       -webkit-background-size: contain;
       background-size: contain;

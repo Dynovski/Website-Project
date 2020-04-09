@@ -1,10 +1,13 @@
+/* import fonts so that thay can be used in this stylesheet */
+
+@import url(./fonts.css);
+
 /* Variables */
 
 :root {
     --ff-roboto: "Roboto";
     --ff-sans-pro: 'Source Sans Pro', sans-serif;
     --ff-code-pro: 'Source Code Pro', monospace;
-
 
     --fw-regular: 400;
     --fw-medium: 600;
@@ -45,6 +48,14 @@ body {
     font-family: var(--ff-roboto);
     font-size: var(--fs-body);
     line-height: 1.6;
+}
+
+/* Navigation bar */
+
+.header-area .main-menu .nav-item .nav-link {
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 /* General styles */

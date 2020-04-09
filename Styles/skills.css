@@ -71,7 +71,7 @@ img {
             "subtitle image";
     }
 
-    .skill {
+    .skill-left-languages {
         display: grid;
         grid-template-columns: 1fr 500px;
         grid-column-gap: 2em;

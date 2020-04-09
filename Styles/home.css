@@ -72,14 +72,14 @@ img {
 
 .additional-info {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 
 .about-me-body {
     font-size: var(--fs-h3);
     font-family: var(--ff-sans-pro);
-    margin: 1.5em 0em;
+    margin: 1.5em 0;
 }
 
 #blue-color {
