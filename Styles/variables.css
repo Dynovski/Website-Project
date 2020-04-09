@@ -6,8 +6,8 @@
 
 :root {
     --ff-roboto: "Roboto";
-    --ff-sans-pro: 'Source Sans Pro', sans-serif;
-    --ff-code-pro: 'Source Code Pro', monospace;
+    --ff-sans-pro: "Sans", sans-serif;
+    --ff-code-pro: "Code", monospace;
 
     --fw-regular: 400;
     --fw-medium: 600;

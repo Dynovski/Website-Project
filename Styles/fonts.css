@@ -6,21 +6,11 @@
 }
 
 @font-face {
-    font-family: "PT_Sans";
-    src: "../Fonts/PT_Sans";
+    font-family: "Sans";
+    src: "../Fonts/Source_Sans_Pro";
 }
 
 @font-face {
-    font-family: "Oswald";
-    src: "../Fonts/Oswald";
-}
-
-@font-face {
-    font-family: "Dosis";
-    src: "..Fonts/Dosis";
-}
-
-@font-face {
-    font-family: "Baloo_2";
-    src: "../Fonts/Baloo_2";
+    font-family: "Code";
+    src: "../Fonts/Source_Code_Pro";
 }
