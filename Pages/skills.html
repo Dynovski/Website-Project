@@ -48,7 +48,7 @@
     <!-- ========================= End Header area ========================= -->
 
     <!-- ========================= Start Skills area ========================= -->
-    <div class="skills">
+    <div id="skills">
         <section class="skill skill-left">
             <h2 class="section-title section-title--skill">
                 Java Programming
@@ -127,17 +127,17 @@
                     <input type="text" class="form-control text-light bg-dark text-center" id="skill-name" placeholder="Dancing" required maxlength="32">
                 </div>
                 <div class="form-group text-center col-md-4">
-                    <label for="file-picker">Choose Image:</label>
-                    <input type="file" class="form-control-file text-light bg-dark" id="file-picker" accept="image/x-png, image/jpg, image/jpeg" required>
+                    <label for="image-url">Write URL To The Image:</label>
+                    <input type="url" class="form-control text-light bg-dark text-center" id="image-url" placeholder="https://www.exampleUrl.com" required>
                 </div>
             </div>
             <div class="form-group text-center">
               <label for="skill-description center">Skill Description:</label>
-              <textarea name="" id="skill-description" rows="6" class="text-light bg-dark form-control"></textarea>
+              <textarea name="" id="skill-description" rows="6" class="text-light bg-dark form-control" required></textarea>
             </div>
             <div class="form-row justify-content-center">
-                <button type="button" class="form-button btn btn-danger">Remove last skill</button>
-                <button type="button" class="form-button btn btn-primary">Add new skill</button>
+                <button id="remove-button" type="button" class="form-button btn btn-danger">Remove last skill</button>
+                <button id="add-button" type="button" class="form-button btn btn-primary">Add new skill</button>
             </div>
         </form>
     </section>
@@ -163,5 +163,8 @@
 
     <!-- Bootstrap JavaScript file -->
     <script src="../JS/bootstrap.min.js"></script>
+
+    <!-- Script to add and delete skills -->
+    <script src="../JS/skills.js"></script>
 </body>
 </html>
