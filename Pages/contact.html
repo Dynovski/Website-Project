@@ -121,52 +121,86 @@
           <div class="form-group col-md-6">
             <label for="input-first-name">First Name</label>
             <input type="text" class="form-control text-light bg-dark text-center" id="input-first-name" placeholder="John" required maxlength="24">
+            <div id="first-name-message"></div>
           </div>
           <div class="form-group col-md-6">
             <label for="input-last-name">Last Name</label>
             <input type="text" class="form-control text-light bg-dark text-center" id="input-last-name" placeholder="Smith" required maxlength="24">
+            <div id="last-name-message"></div>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-sm-8 col-md-4">
             <label for="input-gender">Gender</label>
             <select class="form-control text-light bg-dark" id="input-gender" required>
-              <option selected>Select your gender...</option>
+              <option value="blank" selected>Select your gender...</option>
               <option value="female">Female</option>
               <option value="male">Male</option>
               <option value="other">Other</option>
             </select>
+            <div id="gender-message"></div>
           </div>
           <div class="form-group col-sm-4 col-md-2">
             <label for="input-age">Age</label>
             <input type="number" class="form-control text-light bg-dark text-center" id="input-age" placeholder="21" required min="19" max="99">
+            <div id="age-message"></div>
           </div>
           <div class="form-group col-md-6">
             <label for="input-email">Email</label>
             <input type="email" class="form-control text-light bg-dark text-center" id="input-email" placeholder="example@mail.com" required maxlength="50">
+            <div id="email-message"></div>
           </div>
         </div>
         <div class="form-group">
           <label for="input-website">Website Address</label>
-          <input type="url" class="form-control text-light bg-dark text-center" id="input-website" placeholder="https://example.com/website">
+          <input type="url" class="form-control text-light bg-dark text-center" id="input-website" placeholder="https://www.example.com" required>
+          <div id="website-message"></div>
         </div>
         <div class="form-group">
           <label for="input-comment">Comment</label>
           <textarea class="form-control text-light bg-dark text-center" id="input-comment" placeholder="Write your comment here..." rows="5" required maxlength="254"></textarea>
+          <div id="comment-message"></div>
         </div>
         <div class="form-row justify-content-center">
           <button type="reset" class="form-button btn btn-danger">Reset</button>
-          <button type="submit" class="form-button btn btn-primary">Submit</button>
+          <button id="comment-button" type="button" class="form-button btn btn-primary">Comment</button>
         </div>
       </form>
     </section>
     <!-- ========================= End Form area ========================= -->
+
+    <!-- ========================= Start Comments area ========================= -->
+    <div id="comments">
+      <h2 class="section-title">
+        Comments:
+      </h2>
+      <section class="section-comment">
+        <p class="comment-name">
+          John Smith, 
+          <a class="comment-mail" href="mailto:example@mail.com">
+            example@mail.com
+          </a>
+        </p>
+        <p class="website">
+          <a class="comment-url" href="https://www.example.com">
+            https://www.example.com
+          </a>
+        </p>
+        <p class="comment">
+          This is my first comment on this website. Keep your good work!
+        </p>
+      </section>
+    </div>
+    <!-- ========================= End Comments area ========================= -->
 
     <!-- jQuery file -->
     <script src="../JS/jquery.3.4.1.js"></script>
 
     <!-- Bootstrap JavaScript file -->
     <script src="../JS/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript file -->
+    <script src="../JS/contact.js"></script>
 </body>
 </body>
 </html>

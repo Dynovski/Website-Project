@@ -5,7 +5,7 @@
 /* General styles */
 
 .form-button {
-    width: 80px;
+    width: 100px;
     height: 40px;
     margin: 1em 3em 0em;
 }
@@ -18,7 +18,7 @@ form {
 
 section {
     padding: 0;
-    margin: 2em auto;
+    margin: 3em auto;
 }
 
 
@@ -35,6 +35,46 @@ section {
     margin: 0.5em auto 0em;
     border-radius: 1em;
     width: max-content;
+}
+
+.section-comment {
+    display: grid;
+    grid-column-gap: 2em;
+    grid-template-areas: 
+        "name website"
+        "comment comment";
+    width: 1000px;
+    justify-content: space-between;
+    background: var(--clr-accent);
+    padding: 1em 1em;
+    margin: 1em auto 1em;
+    border-radius: 1em;
+}
+
+.comment-name {
+    grid-area: name;
+    color: var(--clr-darker);
+    font-family: var(--ff-code-pro);
+    padding: 0 0.1em;
+}
+
+.comment-mail {
+    color: rgb(0, 119, 255);
+    text-decoration: none;
+}
+
+.comment-url {
+    grid-area: website;
+    text-align: right;
+    color: grey;
+    font-family: var(--ff-code-pro);
+}
+
+.comment {
+    grid-area: comment;
+    color: var(--clr-darker);
+    font-family: var(--ff-sans-pro);
+    padding: 0;
 }
 
 /* Contacts */

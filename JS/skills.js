@@ -28,9 +28,10 @@ for(let i = 0; i < skillsElements.length; i++)
 }
 
 document.querySelector("#remove-button").onclick = () => {
-    if(skillsElements.length > 0)
-    skillsElements.pop().remove();
-    skills.pop();
+    if(skillsElements.length > 0) {
+        skillsElements.pop().remove();
+        skills.pop();
+    }
 }
 
 document.querySelector("#add-button").onclick = () => {
@@ -39,13 +40,13 @@ document.querySelector("#add-button").onclick = () => {
     let image = document.querySelector("#image-url");
 
     // Check if data was provided
-    if(skillName.value.trim() === "") {
+    if(!skillName.checkValidity()) {
         alert("Skill name must be provided in the form!");
         return;
-    } else if(skillDescription.value.trim() === "") {
+    } else if(!skillDescription.checkValidity()) {
         alert("Skill description must be provided in the form!");
         return;
-    } else if(image.value.trim() === "") {
+    } else if(!image.checkValidity()) {
         alert("Skill image must be provided in the form!");
         return;
     }
