@@ -1,6 +1,9 @@
 var makeBSS = function (el, options) {
-    var $slideshows = document.querySelectorAll(el), // a collection of all of the slideshow
-        $slideshow = {},
+    // a collection of all of the slideshow
+    var slideshows = document.querySelectorAll(el), 
+        // this slideshow instance
+        slideshow = {},
+        // the slideshow object we will use as prototype
         Slideshow = {
             init: function (el, options) {
 
@@ -9,24 +12,19 @@ var makeBSS = function (el, options) {
                 this.opts = {
                     selector: (typeof options.selector === "undefined") ? "figure" : options.selector,
                     auto: (typeof options.auto === "undefined") ? false : options.auto,
-                    speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
+                    speed: (typeof options.auto.speed === "undefined") ? 3000 : options.auto.speed,
                     pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
-                    fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen,
-                    swipe: (typeof options.swipe === "undefined") ? false : options.swipe
                 };
                 
                 this.counter = 0; // to keep track of current slide
-                this.el = el; // current slideshow container    
-                this.$items = el.querySelectorAll(this.opts.selector); // a collection of all of the slides, caching for performance
-                this.numItems = this.$items.length; // total number of slides
-                this.$items[0].classList.add('bss-show'); // add show class to first figure 
+                this.el = el; // current slideshow container element
+                this.items = el.querySelectorAll(this.opts.selector); // a collection of all of the slides
+                this.numItems = this.items.length; // total number of slides
+                this.items[0].classList.add('bss-show'); // add show class to first figure 
                 this.injectControls(el);
                 this.addEventListeners(el);
                 if (this.opts.auto) {
                     this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
-                }
-                if (this.opts.fullScreen) {
-                    this.addFullScreen(this.el);
                 }
                 if (this.opts.swipe) {
                     this.addSwipe(this.el);
@@ -41,13 +39,12 @@ var makeBSS = function (el, options) {
                 }
 
                 // remove .show from whichever element currently has it 
-                // http://stackoverflow.com/a/16053538/2006057
-                [].forEach.call(this.$items, function (el) {
+                [].forEach.call(this.items, function (el) {
                     el.classList.remove('bss-show');
                 });
   
                 // add .show to the one item that's supposed to have it
-                this.$items[this.counter].classList.add('bss-show');
+                this.items[this.counter].classList.add('bss-show');
             },
             injectControls: function (el) {
             // build and inject prev/next controls
@@ -69,6 +66,9 @@ var makeBSS = function (el, options) {
                 docFrag.appendChild(spanNext);
                 el.appendChild(docFrag);
             },
+            /* add event listeners to prev/next
+            buttons, and to left/right arrow keys
+            for keyboard navigation */
             addEventListeners: function (el) {
                 var that = this;
                 el.querySelector('.bss-next').addEventListener('click', function () {
@@ -88,6 +88,8 @@ var makeBSS = function (el, options) {
                     }
                 };
             },
+            /* make slides auto-advance on a timer
+            and pause timer on hover */
             autoCycle: function (el, speed, pauseOnHover) {
                 var that = this,
                     interval = window.setInterval(function () {
@@ -106,61 +108,14 @@ var makeBSS = function (el, options) {
                             }, speed);
                         }
                     }, false);
-                } // end pauseonhover
-                
-            },
-            addFullScreen: function(el){
-                var that = this,
-                fsControl = document.createElement("span");
-                
-                fsControl.classList.add('bss-fullscreen');
-                el.appendChild(fsControl);
-                el.querySelector('.bss-fullscreen').addEventListener('click', function () {
-                    that.toggleFullScreen(el);
-                }, false);
-            },
-            addSwipe: function(el){
-                var that = this,
-                    ht = new Hammer(el);
-                ht.on('swiperight', function(e) {
-                    that.showCurrent(-1); // decrement & show
-                });
-                ht.on('swipeleft', function(e) {
-                    that.showCurrent(1); // increment & show
-                });
-            },
-            toggleFullScreen: function(el){
-                // https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
-                if (!document.fullscreenElement &&    // alternative standard method
-                    !document.mozFullScreenElement && !document.webkitFullscreenElement &&   
-                    !document.msFullscreenElement ) {  // current working methods
-                    if (document.documentElement.requestFullscreen) {
-                      el.requestFullscreen();
-                    } else if (document.documentElement.msRequestFullscreen) {
-                      el.msRequestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) {
-                      el.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) {
-                      el.webkitRequestFullscreen(el.ALLOW_KEYBOARD_INPUT);
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                      document.exitFullscreen();
-                    } else if (document.msExitFullscreen) {
-                      document.msExitFullscreen();
-                    } else if (document.mozCancelFullScreen) {
-                      document.mozCancelFullScreen();
-                    } else if (document.webkitExitFullscreen) {
-                      document.webkitExitFullscreen();
-                    }
                 }
-            } // end toggleFullScreen
-            
-        }; // end Slideshow object .....
+                
+            },
+        };
         
     // make instances of Slideshow as needed
-    [].forEach.call($slideshows, function (el) {
-        $slideshow = Object.create(Slideshow);
-        $slideshow.init(el, options);
+    [].forEach.call(slideshows, function (el) {
+        slideshow = Object.create(Slideshow);
+        slideshow.init(el, options);
     });
 };
