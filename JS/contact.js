@@ -16,10 +16,10 @@ const emailMessage = document.querySelector("#email-message");
 const websiteMessage = document.querySelector("#website-message");
 const commentMessage = document.querySelector("#comment-message");
 
-const validInfo = "Looks good!";
+// Prompt to show when form is correct
+const  validPrompt = "Looks good!";
 
 const commentButton = document.querySelector("#comment-button");
-
 
 commentButton.onclick = () => {
     // If input correct add new comment
@@ -32,6 +32,12 @@ commentButton.onclick = () => {
         clearValidationStatusClasses();
         clearInputs();
     }
+}
+
+// Clear all form data and validation statuses
+document.querySelector("#reset-button").onclick = () => {
+    clearValidationStatusClasses();
+    clearInputs();
 }
 
 // Validates user input if everything is corrent form data is cleared, 
@@ -53,7 +59,7 @@ function validateInput() {
         firstName.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        firstNameMessage.innerHTML = validInfo;
+        firstNameMessage.innerHTML =  validPrompt;
         firstNameMessage.classList.add("valid-feedback");
         firstName.classList.add("is-valid");
     }
@@ -70,7 +76,7 @@ function validateInput() {
         lastName.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        firstNameMessage.innerHTML = validInfo;
+        firstNameMessage.innerHTML =  validPrompt;
         lastNameMessage.classList.add("valid-feedback");
         lastName.classList.add("is-valid");
     }
@@ -82,7 +88,7 @@ function validateInput() {
         gender.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        genderMessage.innerHTML = validInfo;
+        genderMessage.innerHTML =  validPrompt;
         genderMessage.classList.add("valid-feedback");
         gender.classList.add("is-valid");
     }
@@ -104,7 +110,7 @@ function validateInput() {
         age.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        ageMessage.innerHTML = validInfo;
+        ageMessage.innerHTML =  validPrompt;
         ageMessage.classList.add("valid-feedback");
         age.classList.add("is-valid");
     }
@@ -126,7 +132,7 @@ function validateInput() {
         email.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        emailMessage.innerHTML = validInfo;
+        emailMessage.innerHTML =  validPrompt;
         emailMessage.classList.add("valid-feedback");
         email.classList.add("is-valid");
     }
@@ -148,7 +154,7 @@ function validateInput() {
         website.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        websiteMessage.innerHTML = validInfo;
+        websiteMessage.innerHTML =  validPrompt;
         websiteMessage.classList.add("valid-feedback");
         website.classList.add("is-valid");
     }
@@ -165,11 +171,10 @@ function validateInput() {
         comment.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        commentMessage.innerHTML = validInfo;
+        commentMessage.innerHTML =  validPrompt;
         commentMessage.classList.add("valid-feedback");
         comment.classList.add("is-valid");
     }
-
     // If here means that all the data is correct
     return true;
 }
@@ -203,8 +208,8 @@ function clearMessageContent(element) {
 function clearInputs() {
     firstName.value = "";
     lastName.value = "";
-    gender.value = "";
-    age.value = "blank";
+    gender.value = "blank";
+    age.value = "";
     email.value = "";
     website.value = "";
     comment.value = "";

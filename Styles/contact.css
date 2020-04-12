@@ -29,11 +29,10 @@ section {
     text-align: center;
 }
 
-.section-subtitle {
-    background: var(--clr-accent);
-    padding: 0.25em 1em;
-    margin: 0.5em auto 0em;
-    border-radius: 1em;
+.section-subtitle--mail,
+.section-subtitle--phone,
+.section-subtitle--github {
+    font-family: var(--ff-roboto);
     width: max-content;
 }
 
@@ -82,7 +81,7 @@ section {
 @media(min-width: 600px)
 {
     #socials-list {
-    display: flex;
+        display: flex;
     }
 }
 
@@ -110,10 +109,6 @@ a {
 
 a:visited {
     color: dimgray;
-}
-
-a:active {
-    color: red;
 }
 
 a:hover,

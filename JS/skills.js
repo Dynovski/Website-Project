@@ -1,20 +1,22 @@
 // Form inputs
 const skillName = document.querySelector("#skill-name");
 const skillDescription = document.querySelector("#skill-description");
-const image = document.querySelector("#image-url");
+const skillImage = document.querySelector("#image-url");
 
 // Input messages
 const skillNameMessage = document.querySelector("#name-message");
 const skillDescriptionMessage = document.querySelector("#description-message");
 const imageMessage = document.querySelector("#url-message");
 
-const validInfo = "Looks good!";
+// Prompt displayed if data is correct
+const validPrompt = "Looks good!";
 
 // Selecting the div container for all of the skills
 var skillsContainer = document.querySelector("#skills");
 
 // Array of all the skill elements 
 var skillsElements = [];
+// Populating this array
 document.querySelectorAll(".skill").forEach(element => skillsElements.push(element));
 
 class Skill {
@@ -36,9 +38,10 @@ for(let i = 0; i < skillsElements.length; i++)
         skillsElements[i].children[0].innerText,
         skillsElements[i].children[1].innerText,
         skillsElements[i].children[2].src
-    ))
+    ));
 }
 
+// Deleting the oldest skill
 document.querySelector("#remove-button").onclick = () => {
     if(skillsElements.length > 0) {
         skillsElements.pop().remove();
@@ -49,24 +52,13 @@ document.querySelector("#remove-button").onclick = () => {
 document.querySelector("#add-button").onclick = () => {
     // Check if data is correct
     if(validateForm()) {
-        // Add new skill
-        skills.push(new Skill(skillName, skillDescription, image));
-        
-        skillsContainer.innerHTML = 
-    "<section class=\"skill skill-left\">" +
-        "<h2 class=\"section-title section-title--skill\">" +
-            skillName.value + 
-        "</h2>" +
-        "<p class=\"section-subtitle section-subtitle--skill\">" + 
-            skillDescription.value + 
-        "</p>" + 
-        "<img class=\"image-skills\" " + "src=\"" + image.value + "\" alt=\"Picture of a " + skillName.value + 
-        " skill\">" + 
-    "</section>";
+        // Add new skill to the beginning of the array
+        skills.unshift(new Skill(skillName, skillDescription, skillImage));
+        addNewFirstSkill();
+        // Previous element had photo on the left
+        let wasLeft = true;
 
-    var wasLeft = true;
-
-    skillsElements.forEach(element => {
+        skillsElements.forEach(element => {
         if(wasLeft) {
             skillsContainer.innerHTML += 
                 "<section class=\"skill skill-right\">" +
@@ -94,17 +86,14 @@ document.querySelector("#add-button").onclick = () => {
                 "</section>";
             wasLeft = true;
         }
-    });
+        });
 
-    skillsElements = [];
-    document.querySelectorAll(".skill").forEach(element => skillsElements.push(element));
+        // Repopulate skillsElements
+        skillsElements = [];
+        document.querySelectorAll(".skill").forEach(element => skillsElements.push(element));
 
-    clearValidationStatusClasses();
-
-    // Clear the form
-    skillName.value = "";
-    skillDescription.value = "";
-    image.value = "";
+        clearValidationStatusClasses();
+        clearForm();
     }
 }
 
@@ -125,31 +114,31 @@ function validateForm() {
         skillName.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        skillNameMessage.innerHTML = validInfo;
+        skillNameMessage.innerHTML = validPrompt;
         skillNameMessage.classList.add("valid-feedback");
         skillName.classList.add("is-valid");
     }
 
     // No blank, proper url, less than 50 character
-    if (image.validity.valueMissing) {
-        imageMessage.innerHTML = "Please enter URL to the image!";
+    if (skillImage.validity.valueMissing) {
+        imageMessage.innerHTML = "Please enter URL to the skillImage!";
         imageMessage.classList.add("invalid-feedback");
-        image.classList.add("is-invalid");
+        skillImage.classList.add("is-invalid");
         return false;
-    } else if (image.validity.tooLong) {
-        imageMessage.innerHTML = "URL must be less than 50 characters!";
+    } else if (skillImage.validity.tooLong) {
+        imageMessage.innerHTML = "URL must be less than 128 characters!";
         imageMessage.classList.add("invalid-feedback");
-        image.classList.add("is-invalid");
+        skillImage.classList.add("is-invalid");
         return false;
-    } else if (image.validity.typeMismatch) {
+    } else if (skillImage.validity.typeMismatch) {
         imageMessage.innerHTML = "Write an URL adress!";
         imageMessage.classList.add("invalid-feedback");
-        image.classList.add("is-invalid");
+        skillImage.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        imageMessage.innerHTML = validInfo;
+        imageMessage.innerHTML = validPrompt;
         imageMessage.classList.add("valid-feedback");
-        image.classList.add("is-valid");
+        skillImage.classList.add("is-valid");
     }
 
     // no blank, less than 1024 character
@@ -164,15 +153,29 @@ function validateForm() {
         skillDescription.classList.add("is-invalid");
         return false;
     } else { // it goes to the next input
-        skillDescriptionMessage.innerHTML = validInfo;
+        skillDescriptionMessage.innerHTML = validPrompt;
         skillDescriptionMessage.classList.add("valid-feedback");
         skillDescription.classList.add("is-valid");
     }
     return true;
 }
 
+function addNewFirstSkill() {
+    skillsContainer.innerHTML = 
+        "<section class=\"skill skill-left\">" +
+            "<h2 class=\"section-title section-title--skill\">" +
+                skillName.value + 
+            "</h2>" +
+            "<p class=\"section-subtitle section-subtitle--skill\">" + 
+                skillDescription.value + 
+            "</p>" + 
+            "<img class=\"image-skills\" " + "src=\"" + skillImage.value + "\" alt=\"Picture of a " + skillName.value + 
+            " skill\">" + 
+        "</section>";
+}
+
 function clearValidationStatusClasses() {
-    let inputs = [skillName, skillDescription, image];
+    let inputs = [skillName, skillDescription, skillImage];
     let messages = [skillNameMessage, skillDescriptionMessage, imageMessage];
 
     for(let i = 0; i < inputs.length; i++) {
@@ -194,4 +197,10 @@ function removeMessageClasses(element) {
 
 function clearMessageContent(element) {
     element.innerHTML = "";
+}
+
+function clearForm() {
+    skillName.value = "";
+    skillDescription.value = "";
+    skillImage.value = "";
 }

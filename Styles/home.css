@@ -1,26 +1,18 @@
-/* import variables for website */
+/* Import variables for website */
 
 @import url(variables.css);
 
-/* general styles */
+/* General styles */
 
 img {
     display: block;
     max-width: 100%;
 }
 
-/* typography */
+/* Typography */
 
 .section-title--intro {
     font-weight: var(--fw-regular);
-}
-
-.section-subtitle--intro,
-.section-subtitle--additional {
-    background: var(--clr-accent);
-    padding: 0.25em 1em;
-    font-family: var(--ff-code-pro);
-    margin-bottom: 1em;
 }
 
 /* General info */
@@ -91,12 +83,10 @@ img {
 }
 
 #link-dostoevsky:visited {
-    text-decoration: none;
     color: var(--clr-light);
 }
   
 #link-dostoevsky:hover {
-    text-decoration: underline;
     color: lime;
 }
 

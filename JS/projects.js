@@ -1,20 +1,25 @@
-// show alert after page load
+// show alert and change brand in navbar after page load
 window.onload = () => {
+    document.querySelector(".navbar-brand").innerHTML = "onLoad() Welcome!"
     window.alert("Onload event: Page has been successfully loaded!");
 };
 
-// Make card bigger when mouse enters card
+var previousColor;
+
+// Change the border color of the first project
 document.getElementById("first-project").onmouseover = () => {
-    document.getElementById("first-project").style.width = "70rem";
+    let project = document.getElementById("first-project");
+    previousColor = project.style.borderColor;
+    project.style.borderColor = "red";
 }
 
-// Make card smaller when mouse leaves card
+// Change the border color of the first project back to previous one
 document.getElementById("first-project").onmouseout = () => {
-    document.getElementById("first-project").style.width = "28rem";
+    document.getElementById("first-project").style.borderColor = previousColor;
 }
 
 
-// Hide Header on on scroll down using jQuery
+// Hide navbar on on scroll down and show it on scroll up using jQuery
 var didScroll;
 var previousDistanceFromTop = 0;
 var delta = 5;
@@ -51,6 +56,5 @@ function hasScrolled() {
             $('header').removeClass('nav-up');
         }
     }
-    
     previousDistanceFromTop = distanceFromTop;
 }

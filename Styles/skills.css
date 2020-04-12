@@ -16,14 +16,6 @@ img {
     font-weight: var(--fw-regular);
 }
 
-.section-subtitle--skill,
-.section-subtitle--files {
-    background: var(--clr-accent);
-    padding: 0.25em 1em;
-    font-family: var(--ff-code-pro);
-    margin-bottom: 1em;
-}
-
 /* Skills */
 
 .skill-right,
@@ -94,7 +86,7 @@ img {
     list-style: none;
     text-align: center;
     font-family: var(--ff-sans-pro);
-    font-weight: 600;
+    font-weight: var(--fw-medium);
 }
 
 .section-title--add-skill {

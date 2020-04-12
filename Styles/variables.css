@@ -88,7 +88,11 @@ section {
 }
 
 .section-subtitle {
-    margin: 0;
     font-size: var(--fs-h3);
+    font-family: var(--ff-code-pro);
     color: var(--clr-darker);
-}
+    background: var(--clr-accent);
+    padding: 0.25em 1em;
+    margin: 0 auto 1em;
+    border-radius: 1em;
+ }

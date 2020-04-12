@@ -1,6 +1,7 @@
 // After page load refresh the date each second
 window.onload = setInterval(setDate, 1000);
 
+// Gets the date and sets the string to display it
 function setDate() {
     let date = new Date();
     let day = date.getDate();
