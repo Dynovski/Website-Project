@@ -1,0 +1,50 @@
+/* import variables for website */
+
+@import url(variables.css);
+
+/* typography */
+
+.section-title--snake {
+    text-align: center;
+    background-color: var(--clr-accent);
+    color: var(--clr-darker);
+    width: fit-content;
+    padding: 0.5em;
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+section {
+    padding: 2em;
+}
+
+canvas {
+    display: block;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: var(--clr-accent);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+@media(max-width: 400px) {
+    canvas {
+        width: 90%;
+    }
+}
+
+@media(max-width: 800px) {
+    canvas {
+        width: 90%;
+    }
+}
+
+@media(max-width: 1200px) {
+    canvas {
+        width: 80%;
+    }
+}
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="../Styles/bootstrap.min.css">
+
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="../Styles/all.min.css">
+
+    <!-- Page specific CSS file -->
+    <link rel="stylesheet" href="../Styles/snake.css">
+</head>
+<body>
+    <!-- ========================= Start Header area ========================= -->
+    <header class="header-area">
+      <div class="main-menu">
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+              <a class="navbar-brand" href="#">My Personal Webpage</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="snake.html">Play Snake</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================= End Header area ========================= -->
+
+    <!-- ========================= Start Game area ========================= -->
+    <section>
+        <h2 id="game-header" class="section-title section-title--snake">
+            Play snake using arrow keys!
+        </h2>
+    </section>
+    <canvas id="game-window" width="1050" height="570"></canvas>
+    <!-- ========================= End Game area ========================= -->
+
+    <!-- jQuery file -->
+    <script src="../JS/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JavaScript file -->
+    <script src="../JS/bootstrap.min.js"></script>
+
+    <!-- Scrips to play snake -->
+    <script src="../JS/food.js"></script>
+    <script src="../JS/snake.js"></script>
+    <script src="../JS/game.js"></script>
+</body>
+</body>
+</html>
