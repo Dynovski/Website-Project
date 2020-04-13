@@ -217,18 +217,20 @@ function clearInputs() {
 
 function addComment() {
     document.querySelector("#comments").innerHTML += 
-        "<section class=\"section-comment\">" +
-            "<p class=\"comment-name\">" + 
-                firstName.value + " " + lastName.value + ", " +
-                "<a class=\"comment-mail\" href=\"mailto:" + email.value + "\">" + 
-                    email.value + 
+        "<section>" +
+            "<div class=\"section-comment\">" + 
+                "<p class=\"comment-name\">" + 
+                    firstName.value + " " + lastName.value + ", " +
+                    "<a class=\"comment-mail\" href=\"mailto:" + email.value + "\">" + 
+                        email.value + 
+                    "</a>" +
+                "</p>" +
+                "<a class=\"comment-url\" href=\"" + website.value + "\">" 
+                    + website.value + 
                 "</a>" +
-            "</p>" +
-            "<a class=\"comment-url\" href=\"" + website.value + "\">" 
-                + website.value + 
-            "</a>" +
-            "<p class=\"comment\">" +
-                comment.value + 
-            "</p>" +
+                "<p class=\"comment\">" +
+                    comment.value + 
+                "</p>" +
+            "</div>" +
         "</section>";
 }

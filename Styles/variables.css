@@ -11,18 +11,18 @@
 
     --fw-regular: 400;
     --fw-medium: 600;
-    --fw-bold: 800;
+    --fw-bold: 700;
 
     --clr-light: #F2F2F2;
     --clr-darker: #1F2833;
     --clr-background: #222629;
     --clr-dark: #303030;
-    --clr-accent: #86C262;
+    --clr-accent: rgb(238, 221, 67);
 
-    --fs-h1: 3.25rem;
-    --fs-h2: 2.5rem;
-    --fs-h3: 1.4rem;
-    --fs-body: 1rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.25rem;
+    --fs-h3: 1rem;
+    --fs-body: 0.85rem;
 
     --box-shadow: 0.25em 0.25em 0.75em RGBA(0,0,0,0.25);
 }
@@ -30,6 +30,26 @@
 /* Changes for bigger screens */
 
 @media(min-width: 800px)
+{
+    :root {
+        --fs-h1: 3.25rem;
+        --fs-h2: 2.5rem;
+        --fs-h3: 1.4rem;
+        --fs-body: 1rem;
+    }
+}
+
+@media(min-width: 1200px)
+{
+    :root {
+        --fs-h1: 3.75rem;
+        --fs-h2: 3rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.0675rem;
+    }
+}
+
+@media(min-width: 1601px)
 {
     :root {
         --fs-h1: 4.5rem;
@@ -55,7 +75,7 @@ body {
 .header-area .main-menu .nav-item .nav-link {
     font-family: "Roboto";
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
 }
 
 /* General styles */
@@ -80,11 +100,7 @@ h3 { font-size: var(--fs-h3) }
 /* Sections */
 
 section {
-    padding: 4em 2em;
-}
-
-.section-title {
-    margin-bottom: 0.25em;
+    padding: 3em 1em;
 }
 
 .section-subtitle {
@@ -93,6 +109,6 @@ section {
     color: var(--clr-darker);
     background: var(--clr-accent);
     padding: 0.25em 1em;
-    margin: 0 auto 1em;
+    margin: 0.5em auto;
     border-radius: 1em;
  }

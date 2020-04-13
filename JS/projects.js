@@ -1,6 +1,6 @@
 // show alert and change brand in navbar after page load
 window.onload = () => {
-    document.querySelector(".navbar-brand").innerHTML = "onLoad() Welcome!"
+    document.querySelector(".navbar-brand").innerHTML = "Hi!"
     window.alert("Onload event: Page has been successfully loaded!");
 };
 

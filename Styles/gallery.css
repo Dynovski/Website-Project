@@ -6,8 +6,10 @@
 
 .section-title--gallery {
     font-weight: var(--fw-regular);
+    background-color: var(--clr-accent);
+    color: var(--clr-darker);
     text-align: center;
-    padding: 0.4em 0.6em 0.4em;
+    padding: 0.4em;
     border-radius: 1em;
     width: fit-content;
     margin: 0 auto;
@@ -15,18 +17,13 @@
 
 /* Gallery */
 
-.section-title--gallery {
-    background-color: var(--clr-accent);
-    color: var(--clr-darker);
-}
-
   /* the container element needs to be
   relatively positioned and display:
   block so that the slides can be
   "stacked up" inside of it */
   .bss-slides {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
     display: block; 

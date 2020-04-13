@@ -39,9 +39,15 @@ canvas {
     }
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1400px) {
     canvas {
         width: 80%;
+    }
+}
+
+@media(max-width: 1600px) {
+    canvas {
+        width: 70%;
     }
 }
 
