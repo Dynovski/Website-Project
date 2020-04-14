@@ -11,7 +11,7 @@
     text-align: center;
     padding: 0.4em;
     border-radius: 1em;
-    width: fit-content;
+    width: max-content;
     margin: 0 auto;
 }
 

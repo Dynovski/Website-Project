@@ -33,7 +33,7 @@ section {
 .section-subtitle--phone,
 .section-subtitle--github {
     font-family: var(--ff-roboto);
-    width: fit-content;
+    width: max-content;
 }
 
 .section-comment {
