@@ -63,7 +63,7 @@ body {
 /* Navigation bar */
 
 .header-area .main-menu .nav-item .nav-link {
-    font-family: "Roboto";
+    font-family: var(--ff-roboto);
     text-transform: uppercase;
     font-weight: var(--fw-bold);
 }
