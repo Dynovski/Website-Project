@@ -5,7 +5,7 @@
 /* Variables */
 
 :root {
-    --ff-roboto: "Roboto";
+    --ff-roboto: "Roboto", sans-serif;
     --ff-sans-pro: "Sans", sans-serif;
     --ff-code-pro: "Code", monospace;
 
@@ -19,25 +19,15 @@
     --clr-dark: #303030;
     --clr-accent: rgb(238, 221, 67);
 
-    --fs-h1: 2rem;
-    --fs-h2: 1.25rem;
-    --fs-h3: 1rem;
-    --fs-body: 0.85rem;
+    --fs-h1: 3.25rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.4rem;
+    --fs-body: 1rem;
 
     --box-shadow: 0.25em 0.25em 0.75em RGBA(0,0,0,0.25);
 }
 
 /* Changes for bigger screens */
-
-@media(min-width: 800px)
-{
-    :root {
-        --fs-h1: 3.25rem;
-        --fs-h2: 2.5rem;
-        --fs-h3: 1.4rem;
-        --fs-body: 1rem;
-    }
-}
 
 @media(min-width: 1200px)
 {
