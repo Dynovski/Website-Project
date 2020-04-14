@@ -179,6 +179,7 @@ function validateInput() {
     return true;
 }
 
+// Clear css classes for validation status
 function clearValidationStatusClasses() {
     let inputs = [firstName, lastName, gender, age, email, website, comment];
     let messages = [firstNameMessage, lastNameMessage, genderMessage, ageMessage, emailMessage,

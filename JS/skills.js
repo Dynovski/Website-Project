@@ -174,6 +174,7 @@ function addNewFirstSkill() {
         "</section>";
 }
 
+// Clear css classes for validation status
 function clearValidationStatusClasses() {
     let inputs = [skillName, skillDescription, skillImage];
     let messages = [skillNameMessage, skillDescriptionMessage, imageMessage];

@@ -39,41 +39,61 @@ section {
     width: max-content;
 }
 
-/* create layout for comments,
-put elements on the opposite sides, add accent 
-background and max-width */
+/* comments styling */
+/* element containing whole comment content */
 .section-comment {
-    display: grid;
-    grid-column-gap: 2em;
-    grid-template-areas: 
-        "name website"
-        "comment comment";
-    max-width: 1000px;
-    justify-content: space-between;
     background: var(--clr-accent);
     padding: 0.5em 0.5em;
     margin: 1em auto 1em;
     border-radius: 1em;
 }
 
+/* name of commenter */
 .comment-name {
-    grid-area: name;
     color: var(--clr-darker);
     font-family: var(--ff-code-pro);
     padding: 0 0.1em;
 }
 
+/* url to commenter website */
 .comment-url {
-    grid-area: website;
-    text-align: right;
     font-family: var(--ff-code-pro);
 }
 
+/* comment content */
 .comment {
-    grid-area: comment;
     color: var(--clr-darker);
     font-family: var(--ff-sans-pro);
     padding: 0;
+}
+
+/* layout for comments,
+put elements on the opposite sides, add accent 
+background and max-width */
+@media(min-width: 800px){
+
+    .section-comment {
+        display: grid;
+        grid-column-gap: 2em;
+        grid-template-areas: 
+            "name website"
+            "comment comment";
+        max-width: 1000px;
+        justify-content: space-between;
+    }
+    
+    .comment-name {
+        grid-area: name;
+    }
+    
+    .comment-url {
+        grid-area: website;
+        text-align: right;
+    }
+    
+    .comment {
+        grid-area: comment;
+    }
 }
 
 /* Contacts */

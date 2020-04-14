@@ -18,6 +18,7 @@ img {
 
 /* Skills */
 
+/* sections for skills and files */
 .skill,
 .files {
     max-width: 1200px;
@@ -31,6 +32,8 @@ img {
     text-align: center;
 }
 
+/* create layout for skill info and photo 
+if resolution is big enough */
 @media(min-width: 800px) {
     
     .section-title--skill {
@@ -43,6 +46,7 @@ img {
         padding: 0.5em;
     }
 
+    /* photo is on the left */
     .skill-left {
         display: grid;
         grid-template-columns: 350px 1fr;
@@ -52,6 +56,7 @@ img {
             "image subtitle";
     }
 
+    /* photo is on the right */
     .skill-right {
         display: grid;
         grid-template-columns: 1fr 350px;
@@ -61,6 +66,8 @@ img {
             "subtitle image";
     }
 
+    /* to make it look different because photo has different
+    proportions */
     .skill-left-languages {
         display: grid;
         grid-template-columns: 1fr 500px;
@@ -71,6 +78,7 @@ img {
             "image list";
     }
 
+    /* image related to skill */
     .image-skills {
         grid-area: image;
         min-width: 200px;
@@ -92,6 +100,7 @@ img {
     margin-bottom: 1em;
 }
 
+/* form constraining and centering */
 .add-skill {
     max-width: 1000px;
     margin: 0 auto;

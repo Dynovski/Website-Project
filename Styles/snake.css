@@ -14,10 +14,12 @@
     border-radius: 1em;
 }
 
+/* reducing the padding */
 section {
-    padding: 2em;
+    padding: 2em 1em;
 }
 
+/* create accent border around game window and center it */
 canvas {
     display: block;
     border-style: solid;
@@ -27,6 +29,7 @@ canvas {
     justify-content: center;
 }
 
+/* adjust game window to be seen on every screen width */
 @media(max-width: 400px) {
     canvas {
         width: 90%;
