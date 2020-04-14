@@ -20,10 +20,10 @@
     --clr-accent: rgb(238, 221, 67);
 
 
-    --fs-h1: 1.8rem;
-    --fs-h2: 1rem;
-    --fs-h3: 0.8rem;
-    --fs-body: 0.7rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.25rem;
+    --fs-h3: 1rem;
+    --fs-body: 0.85rem;
 
     --box-shadow: 0.25em 0.25em 0.75em RGBA(0,0,0,0.25);
 }
