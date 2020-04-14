@@ -82,7 +82,7 @@ img {
     color: cyan;
 }
 
-#link-dostoevsky {
+#link-dostoevsky:link {
     color: var(--clr-light);
 }
 
@@ -92,6 +92,10 @@ img {
   
 #link-dostoevsky:hover {
     color: lime;
+}
+
+#link-dostoevsky:active {
+    color: red;
 }
 
 /* Date and time */
